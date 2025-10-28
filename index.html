@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Conceitual: Reformas Neoliberais no Brasil</title>
+    
+    <!-- 1. Carrega o Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Carrega o Mermaid.js para renderizar o diagrama -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    
+    <!-- Configuração de Estilo Padrão -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Ajusta o tema do Mermaid para um visual mais limpo */
+        .mermaid {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="max-w-7xl mx-auto my-8 md:my-12 p-4">
+        <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+            
+            <!-- Cabeçalho -->
+            <header class="bg-blue-800 p-6 md:p-8 text-white">
+                <h1 class="text-2xl md:text-3xl font-bold">
+                    Reformas Neoliberais no Brasil (pós-1990) e Seus Impactos
+                </h1>
+                <p class="text-base md:text-lg text-blue-100 mt-1">
+                    Mapa conceitual e análise baseados na atividade proposta e no texto de Bresser-Pereira.
+                </p>
+            </header>
+
+            <!-- Conteúdo Principal: Grid de 2 Colunas -->
+            <main class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Coluna 1: O Mapa Conceitual (Renderizado pelo Mermaid) -->
+                <section>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">
+                        Mapa Conceitual
+                    </h2>
+                    
+                    <!-- 
+                      Este é o bloco de código do Mermaid.js.
+                      O script (no final do body) vai encontrar este bloco
+                      e o transformará em um diagrama SVG.
+                      Para editar o mapa, basta editar este texto.
+                    -->
+                    <div class="p-4 bg-gray-50 border rounded-lg shadow-inner overflow-x-auto">
+                        <pre class="mermaid">
+graph TD;
+    %% --- Nó Central ---
+    A(Reformas Neoliberais no Brasil 1990);
+
+    %% --- As Reformas (Ramos Principais) ---
+    A --> B[Privatizações];
+    A --> C[Abertura Comercial];
+    A --> D[Reforma Trabalhista];
+    A --> E[Reforma Previdenciária];
+
+    %% --- Consequências (do Texto Base) ---
+    C -- Texto Base: levou à --> F(Sobrevalorização do Câmbio);
+    A --> F_FIN(Abertura Financeira);
+    F_FIN -- Texto Base: levou à --> F;
+
+    C -- Texto Base: causou --> G(Fim da Neutralização da Doença Holandesa);
+    
+    F -- resultou em --> H(Desindustrialização);
+    G -- também levou à --> H;
+
+    H -- causa --> I(Quase Estagnação);
+
+    J(Crise Fiscal do Estado) -- levou à --> K(Queda do Investimento Público);
+    K -- agrava --> I;
+
+    %% --- Impactos Sociais (Foco da Atividade) ---
+    %% Usamos { } para destacar os impactos finais
+    H -- impacta o --> IMP1{Impacto: Emprego};
+    I -- impacta a --> IMP2{Impacto: Desigualdade};
+    K -- impacta a --> IMP3{Impacto: Educação};
+
+    %% --- Estilização (Opcional) ---
+    classDef impacto fill:#fdf,stroke:#b4b,stroke-width:2px;
+    class IMP1,IMP2,IMP3 impacto;
+                        </pre>
+                    </div>
+                </section>
+
+                <!-- Coluna 2: As Respostas (Análise) -->
+                <section>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">
+                        Análise das Relações (As Respostas)
+                    </h2>
+                    <div class="space-y-6 text-gray-700 leading-relaxed">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">1. As Reformas Neoliberais</h3>
+                            <p>O ponto de partida do mapa são as reformas solicitadas na atividade: <strong>Privatizações</strong>, <strong>Abertura Comercial</strong>, e as reformas <strong>Trabalhista</strong> e <strong>Previdenciária</strong>. O texto base foca intensamente nas consequências das aberturas.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">2. Abertura e "Quase Estagnação" (Análise do Texto)</h3>
+                            <p>O texto de Bresser-Pereira argumenta que a <strong>Abertura Comercial</strong> e a <strong>Abertura Financeira</strong> foram implementadas de forma problemática.</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1 pl-2">
+                                <li>Elas levaram a uma <strong>sobrevalorização crônica da taxa de câmbio</strong> (o Real ficou "caro" demais).</li>
+                                <li>A Abertura Comercial também acabou com as tarifas que, segundo o autor, "neutralizavam a <strong>Doença Holandesa</strong>" (uma desvantagem competitiva para a indústria causada pela exportação de commodities).</li>
+                                <li>Esses dois fatores (câmbio valorizado e fim da neutralização) tornaram a indústria brasileira não competitiva, causando uma forte <strong>Desindustrialização</strong>.</li>
+                                <li>A desindustrialização, somada à <strong>Queda do Investimento Público</strong> (causada pela crise fiscal), levou o Brasil a um período de <strong>"Quase Estagnação"</strong> econômica.</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">3. Os Impactos Sociais</h3>
+                            <p>Esse cenário econômico de baixo crescimento e desindustrialização gera os impactos sociais diretos solicitados na atividade:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1 pl-2">
+                                <li><strong class="text-purple-700">Impacto no Emprego:</strong> A desindustrialização "prematura" transfere mão de obra de empregos industriais (de maior valor agregado) para o setor de serviços, muitas vezes em empregos de menor qualidade e salário, aumentando o subemprego.</li>
+                                <li><strong class="text-purple-700">Impacto na Educação:</strong> A "Quase Estagnação" e a "Queda do Investimento Público" (resultante da crise fiscal) reduzem a capacidade do Estado de investir em áreas sociais como a educação pública.</li>
+                                <li><strong class="text-purple-700">Impacto na Desigualdade:</strong> A combinação de baixo crescimento, piora na qualidade do emprego e menor investimento social é um cenário que agrava a concentração de renda e a desigualdade.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+    </div>
+
+    <!-- 3. Script para inicializar o Mermaid.js -->
+    <script>
+        // Inicializa o Mermaid para que ele encontre e renderize
+        // todos os blocos de código com a classe "mermaid"
+        mermaid.initialize({ 
+            startOnLoad: true,
+            // Você pode trocar 'default' por 'dark', 'forest', 'neutral'
+            theme: 'default' 
+        });
+    </script>
+
+</body>
+</html>
